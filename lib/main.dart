@@ -33,7 +33,8 @@ class NexaApp extends StatelessWidget {
           theme: ThemeData(
             useMaterial3: true,
             brightness: Brightness.dark,
-            textTheme: GoogleFonts.vazirmatnTextTheme(ThemeData.dark().textTheme),
+            textTheme:
+                GoogleFonts.vazirmatnTextTheme(ThemeData.dark().textTheme),
             scaffoldBackgroundColor: NexaTokens.bgDeep,
             colorScheme: ColorScheme.fromSeed(
               seedColor: theme.primary,
@@ -41,7 +42,7 @@ class NexaApp extends StatelessWidget {
               secondary: theme.secondary,
               brightness: Brightness.dark,
             ),
-            appBarTheme: const AppBarTheme(
+            appBarTheme: AppBarTheme(
               backgroundColor: NexaTokens.bgDeep.withOpacity(0.92),
               surfaceTintColor: Colors.transparent,
               elevation: 0,
@@ -52,21 +53,30 @@ class NexaApp extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: theme.secondary,
                 foregroundColor: Colors.black,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16)),
                 padding: const EdgeInsets.symmetric(vertical: 14),
-                textStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+                textStyle: const TextStyle(
+                    fontWeight: FontWeight.w700, fontSize: 16),
               ),
             ),
             inputDecorationTheme: InputDecorationTheme(
               filled: true,
               fillColor: Colors.white.withOpacity(0.06),
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: Colors.white.withOpacity(0.08))),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(16),
+                borderSide: BorderSide(color: Colors.white.withOpacity(0.08)),
+              ),
               labelStyle: const TextStyle(color: Colors.white70),
               hintStyle: const TextStyle(color: Colors.white38),
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
             ),
           ),
-          builder: (context, child) => Directionality(textDirection: TextDirection.rtl, child: child!),
+          builder: (context, child) => Directionality(
+            textDirection: TextDirection.rtl,
+            child: child!,
+          ),
           home: const RootScreen(),
         );
       },
